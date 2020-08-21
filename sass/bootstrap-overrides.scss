@@ -1,0 +1,71 @@
+// Bootstrap variable overrides:
+
+// BOOTSTRAP's VARIABLES OVERRIDE
+
+// GRID BREAKPOINTS
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+// COLOR SYSTEM
+$primary:       #007BFF;
+$secondary:     #6C757D;
+$success:       #28A745;
+$info:          #17A2B8;
+$warning:       #FFC107;
+$danger:        #DC3545;
+$light:         #F8F9FA;
+$dark:          #343A40;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+(
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+),
+$theme-colors
+);
+
+// TYPOGRAPHY
+
+// font-family
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Open+Sans&family=Roboto&display=swap');
+
+$font-family-sans-serif:      'Open Sans', sans-serif;;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:            $font-family-sans-serif;
+
+$headings-font-family:        'Roboto', sans-serif;
+
+// font sizes
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-lg:                $font-size-base * 1.25;
+$font-size-sm:                $font-size-base * .875;
+
+$h1-font-size:                $font-size-base * 2.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;
+
+$display1-size:               6rem;
+$display2-size:               5.5rem;
+$display3-size:               4.5rem;
+$display4-size:               3.5rem;
+
+$lead-font-size:              $font-size-base * 1.25;
+$small-font-size:             80%;
+
+$blockquote-small-font-size:  $small-font-size;
+$blockquote-font-size:        $font-size-base * 1.25;
