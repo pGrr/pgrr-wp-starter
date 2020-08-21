@@ -22,7 +22,7 @@ module.exports = {
     outputs: [`style.css`, `script.js`],
 
     // watched
-    watchedStyles: '/sass/**/*.scss',
+    watchedStyles: './sass/**/*.scss',
     watchedJs: './js/**/*.js',
     watchedPhp: './**/*.php',
 
