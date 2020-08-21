@@ -50,7 +50,7 @@ if ( ! function_exists( 'pgrr_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'pgrr' ),
+				'primary' => esc_html__( 'Primary menu', 'pgrr' ),
 			)
 		);
 
@@ -143,7 +143,7 @@ function pgrr_scripts() {
 	wp_enqueue_style( 'pgrr-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'pgrr-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'pgrr-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'pgrr-script', get_template_directory_uri() . '/script.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -184,3 +184,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Register Custom Navigation Walker
+ */
+function register_navwalker(){
+	require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
