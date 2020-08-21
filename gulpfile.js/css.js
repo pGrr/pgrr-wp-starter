@@ -1,6 +1,6 @@
 'use strict';
 
-const { styleInput, styleOutput } = require('./paths');
+const { styleInput, styleOutput } = require('./constants');
 const { src, dest } = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');

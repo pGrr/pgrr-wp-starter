@@ -1,7 +1,7 @@
 'use strict';
 
 const del = require('del');
-const { outputs } = require('./paths')
+const { outputs } = require('./constants')
 
 // Clean assets
 module.exports = function clean() {

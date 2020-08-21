@@ -2,7 +2,7 @@
 
 const { src, dest } = require('gulp');
 const wpPot = require('gulp-wp-pot');
-const { wppot: constants } = require('./paths');
+const { wppot: constants } = require('./constants');
 
 // Wp pot task - internationalization make pot file ('gulp makepot')
 function makepot() {

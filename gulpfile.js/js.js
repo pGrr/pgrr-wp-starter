@@ -1,6 +1,6 @@
 'use strict';
 
-const { jsInput, jsOutput } = require('./paths');
+const { jsInput, jsOutput } = require('./constants');
 const { src, dest } = require('gulp');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');

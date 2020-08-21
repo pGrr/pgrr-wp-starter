@@ -17,7 +17,7 @@ module.exports = {
     // outputs
     styleOutput: `style.css`,
     jsOutput: `script.js`,
-    outputs: [styleOutput, jsOutput],
+    outputs: [`style.css`, `script.js`],
 
     // watched
     watchedFiles: ['sass/**/*', 'js/**/*'],
