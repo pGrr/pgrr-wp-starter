@@ -1,23 +1,24 @@
 'use strict';
 
-const { styleInput, styleOutput } = require('./constants');
+const { styleInputs, styleOutputName, styleOutputDir } = require('./constants');
 const { src, dest } = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
-const browsersync = require('./browsersync');
+const rename = require('gulp-rename');
 
 // CSS task
 function css() {
-    return src(styleInput)
-        .pipe(sass())
+    return src(styleInputs)
+        .pipe(sass({
+            includePaths: ['node_modules/bootstrap/scss/', 'sass']
+        }))
         .pipe(autoprefixer({
-            browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(dest(styleOutput))
-        .pipe(browsersync.stream());
+        .pipe(rename(styleOutputName))
+        .pipe(dest(styleOutputDir))
 }
 
 module.exports = css;

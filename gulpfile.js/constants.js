@@ -4,8 +4,8 @@
 module.exports = {
 
     // inputs
-    styleInput: `sass/style.scss`,
-    jsInput: [
+    styleInputs: `sass/style.scss`,
+    jsInputs: [
         // jquery
         `node_modules/jquery/dist/jquery.min.js`,
         // bootstrap
@@ -15,12 +15,16 @@ module.exports = {
     ],
 
     // outputs
-    styleOutput: `style.css`,
-    jsOutput: `script.js`,
+    styleOutputDir: `./`,
+    styleOutputName: `style.css`,
+    jsOutputDir: `./`,
+    jsOutputName: `script.js`,
     outputs: [`style.css`, `script.js`],
 
     // watched
-    watchedFiles: ['sass/**/*', 'js/**/*'],
+    watchedStyles: '/sass/**/*.scss',
+    watchedJs: './js/**/*.js',
+    watchedPhp: './**/*.php',
 
     // wppot
     wppot: {

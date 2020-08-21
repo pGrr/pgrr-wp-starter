@@ -1,1 +1,1 @@
-console.log('Theme scripts loaded.');
+console.log('Theme scripts loaded!');
