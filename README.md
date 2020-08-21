@@ -1,3 +1,7 @@
+# pgrr-wp-starter
+
+A boilerplate wordpress theme built on underscores and bootstrap 4.
+
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
 
 _s
