@@ -1,10 +1,13 @@
 'use strict';
 
 const del = require('del');
-const { outputs } = require('./constants')
+const constants = require('./constants')
 
 // Clean assets
 module.exports = function clean() {
-    return del(outputs);
+    return del([ 
+        constants.styles.output.name, 
+        constants.scripts.output.name,
+    ]);
 }
 

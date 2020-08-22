@@ -3,35 +3,41 @@
 // PATHS
 module.exports = {
 
-    // inputs
-    styleInputs: `sass/style.scss`,
-    jsInputs: [
-        // jquery
-        `node_modules/jquery/dist/jquery.min.js`,
-        // bootstrap
-        `node_modules/bootstrap/dist/js/bootstrap.min.js`,
-        // theme scripts
-        `js/theme-scripts.js`,
-    ],
+    styles: {
+        input: `sass/style.scss`,
+        output: {
+            name: 'style.css',
+            dir: './',
+        },
+        watched: './sass/**/*.scss',
+    },
 
-    // outputs
-    styleOutputDir: `./`,
-    styleOutputName: `style.css`,
-    jsOutputDir: `./`,
-    jsOutputName: `script.js`,
-    outputs: [`style.css`, `script.js`],
-
-    // watched
-    watchedStyles: './sass/**/*.scss',
-    watchedJs: './js/**/*.js',
-    watchedPhp: './**/*.php',
-
-    // wppot
+    scripts: {
+        input: [
+            // jquery
+            `node_modules/jquery/dist/jquery.min.js`,
+            // bootstrap
+            `node_modules/bootstrap/dist/js/bootstrap.min.js`,
+            // theme scripts
+            `js/theme-scripts.js`,
+        ],
+        output: {
+            name: 'script.js',
+            dir: './',
+        },
+        watched: './js/**/*.js',
+    },
+    
     wppot: {
         input: './**/*.php',
-        output: './languages/pgrr.pot',
+        output: {
+            name: 'pgrr.pot',
+            dir: './languages/',
+        },
         domain: 'pgrr',
         package: 'pgrr',
+        watched: './**/*.php',
     }
+
 }
 

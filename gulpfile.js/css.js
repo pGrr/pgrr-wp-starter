@@ -1,6 +1,6 @@
 'use strict';
 
-const { styleInputs, styleOutputName, styleOutputDir } = require('./constants');
+const constants = require('./constants');
 const { src, dest } = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -9,7 +9,7 @@ const rename = require('gulp-rename');
 
 // CSS task
 function css() {
-    return src(styleInputs)
+    return src(constants.styles.input)
         .pipe(sass({
             includePaths: ['node_modules/bootstrap/scss/', 'sass']
         }))
@@ -17,8 +17,8 @@ function css() {
             cascade: false
         }))
         .pipe(cleanCSS({ compatibility: 'ie8' }))
-        .pipe(rename(styleOutputName))
-        .pipe(dest(styleOutputDir))
+        .pipe(rename(constants.styles.output.name))
+        .pipe(dest(constants.styles.output.dir))
 }
 
 module.exports = css;
