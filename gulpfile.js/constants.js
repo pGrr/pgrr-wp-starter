@@ -27,6 +27,10 @@ module.exports = {
         },
         watched: './js/**/*.js',
     },
+
+    php: {
+        watched: './**/*.php'
+    },
     
     wppot: {
         input: './**/*.php',

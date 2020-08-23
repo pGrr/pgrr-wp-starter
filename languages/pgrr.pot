@@ -76,6 +76,10 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
+#: header.php:58
+msgid "Toggle Navigation"
+msgstr ""
+
 #. translators: %s: search query.
 #: search.php:21
 msgid "Search Results for: %s"
