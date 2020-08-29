@@ -1,6 +1,8 @@
 'use strict';
 
-const browsersync = require('./browsersync');
+const constants = require('./constants');
+const css = require('./css');
+const js = require('./js');
 const { watch } = require('gulp');
 
 

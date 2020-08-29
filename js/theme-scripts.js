@@ -4,7 +4,7 @@ console.log('Theme scripts loaded!');
  * WP Comments markup styling
  */
 $(document).ready(function() {
-  $('.comment').addClass('card shadow my-4');
+  $('.comment').addClass('card shadow m-4');
   $('.comment-meta').addClass('card-header');
   $('.comment-author').addClass('mb-1');
   $('.comment-author>*').addClass('mr-1');

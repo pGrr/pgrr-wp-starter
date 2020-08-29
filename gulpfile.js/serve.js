@@ -4,7 +4,7 @@ const constants = require('./constants');
 const browsersync = require('./browsersync');
 const css = require('./css');
 const js = require('./js');
-const { watch, series, parallel } = require('gulp');
+const { watch, series } = require('gulp');
 
 
 module.exports = () => {
