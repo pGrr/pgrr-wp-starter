@@ -11,22 +11,21 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pgrr' ) ); ?>">
+	<footer id="colophon" class="site-footer fixed-bottom bg-primary shadow">
+		<div class="site-info text-white-50 text-center small">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'pgrr' ) ); ?>" class="unlink">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				printf( esc_html__( 'Proudly powered by %s', 'pgrr' ), 'WordPress' );
 				?>
 			</a>
-			<span class="sep"> | </span>
+			<span class="sep unlink"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pgrr' ), 'pgrr', '<a href="https://github.com/pGrr">Paolo Garroni</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'pgrr' ), 'pgrr', '<a href="https://github.com/pGrr" class="unlink">Paolo Garroni</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 

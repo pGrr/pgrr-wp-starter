@@ -23,3 +23,22 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "bootstrap.scss";
 
 // Theme styles:
+.skip-link, .screen-reader-text {
+  font-size:0px;
+  position: absolute;
+}
+
+// unstile links
+a.unlink, a.unlink:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.serif {
+  font-family: $font-family-serif;
+}
+
+.sans-serif {
+  font-family: $font-family-sans-serif;
+}
+

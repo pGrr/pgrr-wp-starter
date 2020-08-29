@@ -10,7 +10,7 @@
 ?>
 
 <!-- Navbar -->
-<header id="masthead" class="site-header navbar-static-top bg-primary">
+<header id="masthead" class="site-header navbar-static-top navbar-dark bg-primary shadow">
   <nav class="navbar navbar-expand-md" role="navigation">
 
     <!-- Brand -->
@@ -34,14 +34,14 @@
         
         <?php if (get_bloginfo('name') || is_customize_preview()) : ?>
           <!-- Site title -->
-          <a class="site-title" href="<?= esc_url(home_url('/')); ?>">
+          <a class="site-title sans-serif unlink" href="<?= esc_url(home_url('/')); ?>">
             <?= esc_html__(bloginfo('name'), 'pgrr'); ?>
           </a><!-- Site title -->
         <?php endif; ?>
 
         <?php if (get_bloginfo('description') || is_customize_preview()) : ?>
           <!-- Site description -->
-          <a class="site-description small" href="<?= esc_url(home_url('/')); ?>">
+          <a class="site-description serif unlink small" href="<?= esc_url(home_url('/')); ?>">
             <?= esc_html__(get_bloginfo('description'), 'pgrr') ?>
           </a><!-- Site description -->
         <?php endif; ?>
@@ -59,7 +59,7 @@
       'container'         => 'div',
       'container_id'      => 'main-nav',
       'container_class'   => 'collapse navbar-collapse justify-content-end',
-      'menu_class'        => 'nav navbar-nav',
+      'menu_class'        => 'nav navbar-nav sans-serif',
       'depth'             => 3,
     ));
     ?>
