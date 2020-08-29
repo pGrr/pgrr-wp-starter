@@ -4,6 +4,9 @@ console.log('Theme scripts loaded!');
  * WP Comments markup styling
  */
 $(document).ready(function() {
+  $('ol.comment-list').addClass('pl-0');
+  $('ol.children').addClass('pl-0');
+
   $('.comment').addClass('card shadow m-4');
   $('.comment-meta').addClass('card-header');
   $('.comment-author').addClass('mb-1');
@@ -14,7 +17,7 @@ $(document).ready(function() {
   $('.comment-content').addClass('card-body');
   $('.reply').addClass('card-footer');
   $('.comment-reply-link').addClass('btn btn-outline-success shadow');
-  $('.comment-respond').addClass('p-4');
+  $('.comment-respond').addClass('p-4 text-center');
   $('.logged-in-as>a').addClass('small unlink');
   $('.comment-form-comment>textarea').addClass('form-control');
   $('.comment-form-comment>label').addClass('d-none');

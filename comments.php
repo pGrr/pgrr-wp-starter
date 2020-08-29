@@ -21,12 +21,12 @@ if (post_password_required()) {
 }
 ?>
 
-<div id="comments" class="comments-area row my-3">
+<div id="comments" class="comments-area row">
 
 	<?php if (have_comments()) : ?>
 
-		<div class="col-12 my-3">
-			<h2 class="comments-title my-2 h3">
+		<div class="col-12">
+			<h2 class="comments-title my-3 h3 text-center">
 				<?php
 				$pgrr_comment_count = get_comments_number();
 				if ('1' === $pgrr_comment_count) {
