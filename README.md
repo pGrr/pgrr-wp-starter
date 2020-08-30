@@ -1,3 +1,5 @@
+TODO: w3c validation, a3checker validation, sidebar and widgets
+
 # pgrr-wp-starter
 
 A starter wordpress theme built on [underscores](https://underscores.me/) and [bootstrap4](https://getbootstrap.com/) providing [gulp.js](https://gulpjs.com/) build tasks.
