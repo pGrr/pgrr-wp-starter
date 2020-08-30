@@ -1,12 +1,16 @@
 # pgrr-wp-starter
 
-__TODO: w3c validation, a3checker validation, sidebar and widgets__
-
 A starter wordpress theme built on [underscores](https://underscores.me/) and [bootstrap4](https://getbootstrap.com/) providing [gulp.js](https://gulpjs.com/) build tasks.
 
 This theme provides only basic styling, using mostly bootstrap classes and very little additional css and js, mainly to provide a fallback styling in case the child theme hasn't defined some templates.
 
 The aim is to provide either a starter theme to be modified directly or a parent theme to be customized by a child theme. This theme will just provide bootstrap integration and basic (fallback) styling: customizations are then easier to accomplish. Also, the gulp build process allow to easily change the global look and feel of the theme by overriding bootstrap's variables. 
+
+###### TODO
+
+* Widgets (sidebar, footer?, styling)
+* W3C markup validation
+* A3Checker validation
 
 ## Gulp build tasks
 

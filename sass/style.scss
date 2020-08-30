@@ -22,7 +22,11 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import "bootstrap-overrides";
 @import "bootstrap.scss";
 
-// Theme styles:
+/**
+ * Theme styles
+ */
+
+// skip link screen reader
 .skip-link, .screen-reader-text {
   font-size:0px;
   position: absolute;
@@ -34,10 +38,10 @@ a.unlink, a.unlink:hover {
   text-decoration: inherit;
 }
 
+// Serif and sans-serif classes
 .serif {
   font-family: $font-family-serif;
 }
-
 .sans-serif {
   font-family: $font-family-sans-serif;
 }

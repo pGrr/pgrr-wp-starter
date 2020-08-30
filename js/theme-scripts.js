@@ -1,5 +1,3 @@
-console.log('Theme scripts loaded!');
-
 /**
  * WP Comments markup styling
  */
@@ -36,5 +34,3 @@ $(document).ready(function () {
   $('.post-thumbnail>img').css('width', 'auto');
 
 });
-
-// TODO: screenshot, readme, package.json (clean), footer (widgets), sidebar?, clean template-parts, clean style, clean theme-scripts
