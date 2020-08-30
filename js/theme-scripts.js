@@ -1,5 +1,3 @@
-console.log('Theme scripts loaded!');
-
 /**
  * WP Comments markup styling
  */
@@ -35,4 +33,13 @@ $(document).ready(function () {
     .addClass('img-thumbnail img-fluid shadow mx-auto d-block ');
   $('.post-thumbnail>img').css('max-height', '200px');
   $('.post-thumbnail>img').css('width', 'auto');
+});
+
+
+/**
+ * Custom logo link image styling
+ */
+$(document).ready(function () {
+  $('.custom-logo-link>img').css('max-height', '50px');
+  $('.custom-logo-link>img').css('width', 'auto');
 });
