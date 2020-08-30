@@ -11,13 +11,11 @@
 				<div class="entry-content col-12 p-3 text-justify">
 					<?php the_content(); ?>
 				</div>
-				<footer class="col-12">
-					<?php
-					if (comments_open() || get_comments_number()) :
-						comments_template();
-					endif;
-					?>
-				</footer>
+				<?php
+				if (comments_open() || get_comments_number()) :
+					comments_template();
+				endif;
+				?>
 			</article>
 		<?php endwhile; ?>
 

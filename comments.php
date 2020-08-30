@@ -50,18 +50,17 @@ if (post_password_required()) {
 	<?php the_comments_navigation(); ?>
 </div>
 
-<div class="col-12">
-	<ol class="comment-list">
-		<?php
+<ol class="comment-list">
+	<?php
 		wp_list_comments(
 			array(
 				'style'      => 'ol',
 				'short_ping' => true,
+				'format' => 'xhtml',
 			)
 		);
-		?>
-	</ol><!-- .comment-list -->
-</div>
+	?>
+</ol><!-- .comment-list -->
 
 <div class="col-12">
 

@@ -1,4 +1,4 @@
-<form class="form-inline justify-content-center" role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+<form class="form-inline search-form justify-content-center" role="search" method="get" action="<?php echo home_url( '/' ); ?>">
   <label>
     <span class="screen-reader-text">Cerca:</span>
     <input type="search" class="search-field form-control mr-sm-2" placeholder="<?php esc_html_e('Search...', 'pgrr') ?>" value="" name="s" title="Cerca:" />

@@ -12,8 +12,6 @@ This theme can be used either as a starter theme to be modified directly or a pa
 
 ###### TODO
 
-* __W3C markup validation__
-* __A3Checker validation__
 * Widgets (sidebar, footer?, styling)
 
 ## Gulp build tasks

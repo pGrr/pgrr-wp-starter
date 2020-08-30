@@ -7,8 +7,9 @@ $(document).ready(function () {
   $('ol.comment-list').addClass('pl-0');
   $('ol.children').addClass('pl-0');
   $('.comment').addClass('card shadow m-4');
-  $('.comment-meta').addClass('card-header');
-  $('.comment-author').addClass('mb-1');
+  $('.comment-meta').addClass('card-header small');
+  $('.comment-body>p').addClass('p-2')
+  $('.comment-author').addClass('card-header border-bottom-0');
   $('.comment-author>*').addClass('mr-1');
   $('.comment-author>b>a').addClass('unlink');
   $('.avatar').addClass('rounded-circle shadow');
