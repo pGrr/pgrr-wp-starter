@@ -1,6 +1,6 @@
 # pgrr-wp-starter
 
-## A starter wordpress theme built on [underscores](https://underscores.me/) and [bootstrap4](https://getbootstrap.com/) providing [gulp.js](https://gulpjs.com/) build tasks.
+## A starter wordpress theme built with [underscores](https://underscores.me/), [bootstrap4](https://getbootstrap.com/) and [gulp.js](https://gulpjs.com/), providing basic w3c-validated, accessible and bootstrap-styled templates as a starting point for theme development.
 
 This theme can be used either as a starter theme to be modified directly or a parent theme to be customized by a child theme, and provides:
 
