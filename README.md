@@ -1,16 +1,20 @@
 # pgrr-wp-starter
 
-A starter wordpress theme built on [underscores](https://underscores.me/) and [bootstrap4](https://getbootstrap.com/) providing [gulp.js](https://gulpjs.com/) build tasks.
+## A starter wordpress theme built on [underscores](https://underscores.me/) and [bootstrap4](https://getbootstrap.com/) providing [gulp.js](https://gulpjs.com/) build tasks.
 
-This theme provides only basic styling, using mostly bootstrap classes and very little additional css and js, mainly to provide a fallback styling in case the child theme hasn't defined some templates.
+This theme can be used either as a starter theme to be modified directly or a parent theme to be customized by a child theme, and provides:
 
-The aim is to provide either a starter theme to be modified directly or a parent theme to be customized by a child theme. This theme will just provide bootstrap integration and basic (fallback) styling: customizations are then easier to accomplish. Also, the gulp build process allow to easily change the global look and feel of the theme by overriding bootstrap's variables. 
+* Underscores boilerplate code and file structure
+* Bootstrap integration
+* Basic template styling, using mostly bootstrap classes and very little additional css and js (mainly to provide a fallback styling in case the child theme hasn't defined some templates)
+* A build workflow that simplyfies development and allows to easily customize the look and feel of the website by overriding the default bootstrap's variables
+* Valid and accessible code, validated with [https://validator.w3.org/](https://validator.w3.org/) and [https://achecker.ca/](https://achecker.ca/) (WCAG 2.0 (Level AA))
 
 ###### TODO
 
+* __W3C markup validation__
+* __A3Checker validation__
 * Widgets (sidebar, footer?, styling)
-* W3C markup validation
-* A3Checker validation
 
 ## Gulp build tasks
 
