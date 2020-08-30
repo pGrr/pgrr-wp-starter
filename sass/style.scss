@@ -1,16 +1,16 @@
 /*!
 Theme Name: pgrr
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/pGrr/pgrr-wp-starter
 Author: Paolo Garroni
 Author URI: https://github.com/pGrr
-Description: A boilerplate wordpress theme built on underscores and bootstrap 4.
+Description: A starter wordpress theme built with underscores, bootstrap4, fontawesome and gulp.js which provides w3c-validated, accessible and bootstrap-styled code as a starting point for theme development.
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: pgrr
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: underscores, bootstrap, fontawesome, gulp, custom-background, w3c, valid, accessible, starter, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned.
@@ -21,6 +21,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 @import "bootstrap-overrides";
 @import "bootstrap.scss";
+@import "fontawesome";
 
 /**
  * Theme styles

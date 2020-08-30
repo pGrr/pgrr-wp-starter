@@ -19,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/preset-env": "^7.11.0",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@wordpress/scripts": "^12.1.0",
     "bootstrap": "^4.5.2",
     "browser-sync": "^2.26.12",

@@ -11,7 +11,11 @@ const rename = require('gulp-rename');
 function css() {
     return src(constants.styles.input)
         .pipe(sass({
-            includePaths: ['node_modules/bootstrap/scss/', 'sass']
+            includePaths: [
+                'node_modules/bootstrap/scss/', 
+                'node_modules/@fortawesome/fontawesome-free/scss', 
+                'sass'
+            ],
         }))
         .pipe(autoprefixer({
             cascade: false

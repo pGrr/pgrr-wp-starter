@@ -1,5 +1,4 @@
-<hr class="my-5 w-100" />
-<div class="card-columns mb-5">
+<div class="card-columns my-4">
   <?php while (have_posts()) : the_post(); ?>
     <article class="my-3">
       <div class="card shadow">
@@ -21,4 +20,3 @@
     </article>
   <?php endwhile; ?>
 </div>
-<hr class="my-5 w-100" />
