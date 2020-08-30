@@ -1,11 +1,67 @@
 # pgrr-wp-starter
 
-A boilerplate wordpress theme built on underscores and bootstrap 4.
+A starter wordpress theme built on [underscores](https://underscores.me/) and [bootstrap4](https://getbootstrap.com/) providing [gulp.js](https://gulpjs.com/) build tasks.
+
+This theme provides only basic styling, using mostly bootstrap classes and very little additional css and js, mainly to provide a fallback styling in case the child theme hasn't defined some templates.
+
+The aim is to provide either a starter theme to be modified directly or a parent theme to be customized by a child theme. This theme will just provide bootstrap integration and basic (fallback) styling: customizations are then easier to accomplish. Also, the gulp build process allow to easily change the global look and feel of the theme by overriding bootstrap's variables. 
+
+## Gulp build tasks
+
+`gulp.js` directory provides several useful tasks (css, js, browsersync, languages pot-compiling). In the directory, each js file is a single task and `index.js` is the equivalent to the `gulpfile.js` (see source code for more details).
+
+The build process is easily customized by modifying just two files:
+
+* `constants.js` - contains all paths and constants used by the tasks
+* `index.js` - requires tasks and exports them (only tasks exported here will be usable by gulp).
+
+## Styles
+
+`sass` directory contains sass source files. The most important files are:
+
+* `bootstrap-overrides.scss` - overrides bootstrap's variable with custom values
+* `style.scss` - provides additional theme-specific style
+
+The gulp `css` task will include, concatenate, autoprefix and minify respectively bootstrap4 css and custom styles (see `gulp.js/css.js` for details).
+
+The result is placed into `style.css`, included by wordpress as the main style of the theme.
+
+## Scripts
+
+`scripts` directory contains javascript source files. The most important files are:
+
+* `theme-scripts.js` - contains the theme-specific javascript
+
+The gulp `js` task will concat, transpile using babel and uglify (minify, with variable renaming) respectively bootstrap4 js and the theme-specific js.
+
+The result is placed into `script.js`, included by wordpress as the main script of the theme.
+
+## Wordpress theme files
+
+The theme uses the default underscores structure, with some modifications:
+
+* Underscores styles have been removed, and everything has been styled using mostly bootstrap classes (and very little additional css and js - see `sass/style.scss` and `js/theme-scripts.js`)
+* `template-parts` - contains template files used throughout the theme
+* `functions.php` - is mostly left untouched. It just adds wp-bootstrap-navwalker support and the sidebar registration is commented out (sidebar not implemented yet: `sidebar.php` has been removed until the implementation will be added).
+* `index.php` - has been modified to use the post-type-specific template-part. As last option, if the post type is not singular, the `template-parts/content-posts.php` will be used to display latest posts (with a masonry cards layout as default).
+* `singular.php` - substitutes (`single.php` and `page.php`, providing only a base layout). More complex layouts for single posts or pages can be defined in child-themes, with `singular.php` used as fallback
+* `archive.php` and `search.php` - use the same basic masonry cards layout that is used to display latest posts
+* `404.php` - provides a basic message and search form, using `searchform.php`
+* `searchform.php` - provides a bootstrap style for search form
+* `comments.php` - has been styled using bootstrap, but using jquery to add bootstrap classes to the html that wordpress outputs by default (see `js/theme-scripts.js`)
+* `header.php` - uses wp-bootstrap-navwalker to integrate bootstrap with wordpress navigation
+* `footer.php` - provides a basic footer
+
+## Languages
+
+As in the original underscores theme, the language files are in `languages` directory. Pot making is taken care by the `gulpfile.js/wp-pot.js` gulp task. 
+
+------
+
+_s original readme
+=========
 
 [![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)
-
-_s
-===
 
 Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 

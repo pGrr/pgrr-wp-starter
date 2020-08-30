@@ -3,10 +3,9 @@ console.log('Theme scripts loaded!');
 /**
  * WP Comments markup styling
  */
-$(document).ready(function() {
+$(document).ready(function () {
   $('ol.comment-list').addClass('pl-0');
   $('ol.children').addClass('pl-0');
-
   $('.comment').addClass('card shadow m-4');
   $('.comment-meta').addClass('card-header');
   $('.comment-author').addClass('mb-1');
@@ -27,3 +26,15 @@ $(document).ready(function() {
   $('#reply-title').addClass('h4');
 });
 
+/**
+ * Singular featured image styling
+ */
+$(document).ready(function () {
+  $('.post-thumbnail>img')
+    .addClass('img-thumbnail img-fluid shadow mx-auto d-block ');
+  $('.post-thumbnail>img').css('max-height', '200px');
+  $('.post-thumbnail>img').css('width', 'auto');
+
+});
+
+// TODO: screenshot, readme, package.json (clean), footer (widgets), sidebar?, clean template-parts, clean style, clean theme-scripts
