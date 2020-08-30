@@ -11,21 +11,19 @@
 
 <!-- Navbar -->
 <header id="masthead" class="site-header navbar-static-top navbar-dark bg-primary shadow">
-  <nav class="navbar navbar-expand-md" role="navigation">
+  <nav class="navbar navbar-expand-md">
 
     <!-- Brand -->
     <div class="navbar-brand d-flex flex-row">
 
       <!-- Toggler button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button><!-- Toggler button -->
 
       <?php if (has_custom_logo()) : ?>
         <!-- Logo -->
-        <a href="<?php echo esc_url(home_url('/')); ?>">
           <?php the_custom_logo() ?>
-        </a><!-- Logo -->
       <?php endif; ?>
 
       <?php if (get_bloginfo('name') || get_bloginfo('description')) : ?>
