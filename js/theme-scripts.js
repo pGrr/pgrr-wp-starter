@@ -1,3 +1,5 @@
+console.log('Theme scripts loaded!');
+
 /**
  * WP Comments markup styling
  */
@@ -32,5 +34,4 @@ $(document).ready(function () {
     .addClass('img-thumbnail img-fluid shadow mx-auto d-block ');
   $('.post-thumbnail>img').css('max-height', '200px');
   $('.post-thumbnail>img').css('width', 'auto');
-
 });
