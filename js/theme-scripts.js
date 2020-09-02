@@ -19,7 +19,7 @@ $(document).ready(function () {
   $('.logged-in-as>a').addClass('small unlink');
   $('.comment-form-comment>textarea').addClass('form-control');
   $('.comment-form-comment>label').addClass('d-none');
-  $('.form-submit>input').addClass('btn btn-outline-success');
+  $('#submit').addClass('btn btn-outline-success');
   $('input#author, input#email, input#url').addClass('form-control');
   $('#cancel-comment-reply-link').addClass('ml-3');
   $('#reply-title').addClass('h4');
