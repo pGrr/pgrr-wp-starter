@@ -43,4 +43,3 @@ $(document).ready(function () {
   $('.custom-logo-link>img').css('max-height', '50px');
   $('.custom-logo-link>img').css('width', 'auto');
 });
-

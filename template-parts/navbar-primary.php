@@ -11,7 +11,7 @@
 ?>
 
 <!-- Navbar -->
-<header id="masthead" class="site-header navbar-static-top navbar-dark bg-primary shadow">
+<header id="masthead" class="site-header navbar-static-top <?= get_theme_mod('nav_bg_type') ?> <?= get_theme_mod('nav_bg') ?> shadow">
   <nav class="navbar navbar-expand-lg">
 
     <!-- Brand -->
