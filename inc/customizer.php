@@ -1,5 +1,5 @@
 <?php
-require_once get_stylesheet_directory() . '/controllers/customizer/class-top-navbar-customizer.php';
+require_once get_stylesheet_directory() . '/controllers/customizer/class-pgrr-customizer.php';
 
 /**
  * pgrr Theme Customizer
@@ -33,8 +33,7 @@ function pgrr_customize_register($wp_customize)
 				'render_callback' => 'pgrr_customize_partial_blogdescription',
 			)
 		);
-		\pgrr\TopNavbarCustomizer::addSection($wp_customize);
-		\pgrr\TopNavbarCustomizer::addAll($wp_customize);
+		\pgrr\PgrrCustomizer::addAll($wp_customize);
 	}
 }
 add_action('customize_register', 'pgrr_customize_register');
