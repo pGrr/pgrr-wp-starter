@@ -43,3 +43,9 @@ $(document).ready(function () {
   $('.custom-logo-link>img').css('max-height', '50px');
   $('.custom-logo-link>img').css('width', 'auto');
 });
+
+$(document).ready(function () {
+  $('footer a').addClass('unlink');
+  $('footer ul, footer li').css('list-style-type', 'none');
+  $('footer ul').css('margin', '0px');
+});

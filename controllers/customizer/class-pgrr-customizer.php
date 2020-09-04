@@ -2,7 +2,11 @@
 
 namespace pgrr;
 
+use urbanfabrica\view\Footer;
+
 require_once get_stylesheet_directory() . '/controllers/customizer/class-top-navbar-customizer.php';
+require_once get_stylesheet_directory() . '/controllers/customizer/class-footer-customizer.php';
+
 
 class PgrrCustomizer 
 {
@@ -10,11 +14,12 @@ class PgrrCustomizer
   {
     self::addPanel($wp_customize);
     TopNavbarCustomizer::addAll($wp_customize);
+    FooterCustomizer::addAll($wp_customize);
   }
 
   static function addPanel($wp_customize) {
     $wp_customize->add_panel( 'pgrr_options', array(
-      'title' => __( 'Pgrr theme options' ),
+      'title' => __( 'Pgrr theme options', 'pgrr'),
       'priority' => 999, // bottom
     ) );
   }

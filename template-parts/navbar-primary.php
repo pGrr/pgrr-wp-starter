@@ -11,8 +11,8 @@
 ?>
 
 <!-- Navbar -->
-<header id="masthead" class="site-header navbar-static-top <?= get_theme_mod('nav_bg_type') ?> <?= get_theme_mod('nav_bg') ?> <?= get_theme_mod('nav_shadow') ?>">
-  <nav class="navbar navbar-expand-lg">
+<header id="masthead" class="site-header">
+  <nav class="navbar navbar-expand-lg navbar-static-top <?= get_theme_mod('nav_bg_type') ?> <?= get_theme_mod('nav_bg') ?> <?= get_theme_mod('nav_shadow') ?>">
 
     <!-- Brand -->
     <div class="navbar-brand d-flex flex-row">

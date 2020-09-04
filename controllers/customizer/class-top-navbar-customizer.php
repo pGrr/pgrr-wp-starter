@@ -14,7 +14,7 @@ class TopNavbarCustomizer
   static function addSection($wp_customize)
   {
     $wp_customize->add_section('nav', array(
-      'title' => __('Top navbar'),
+      'title' => __('Top navbar', 'pgrr'),
       'panel' => 'pgrr_options', 
       'priority' => 33,
       'capability' => 'edit_theme_options',
@@ -38,8 +38,8 @@ class TopNavbarCustomizer
           'settings'       => 'nav_bg_type',
           'type'           => 'select',
           'choices'        => array(
-            'navbar-dark'   => __('Dark'),
-            'navbar-light'   => __('Light'),
+            'navbar-dark'   => __('Dark', 'pgrr'),
+            'navbar-light'   => __('Light', 'pgrr'),
           )
         )
       )
@@ -62,16 +62,15 @@ class TopNavbarCustomizer
           'settings'       => 'nav_bg',
           'type'           => 'select',
           'choices'        => array(
-            'bg-primary'   => __('Primary'),
-            'bg-secondary'   => __('Secondary'),
-            'bg-info'   => __('Info'),
-            'bg-warning'   => __('Warning'),
-            'bg-success'   => __('Success'),
-            'bg-light'  => __('Light'),
-            'bg-dark'   => __('Dark'),
-            'bg-white'   => __('White'),
-            'bg-black'   => __('Black'),
-            'bg-transparent'   => __('Transparent'),
+            'bg-primary'   => __('Primary', 'pgrr'),
+            'bg-secondary'   => __('Secondary', 'pgrr'),
+            'bg-info'   => __('Info', 'pgrr'),
+            'bg-warning'   => __('Warning', 'pgrr'),
+            'bg-success'   => __('Success', 'pgrr'),
+            'bg-light'  => __('Light', 'pgrr'),
+            'bg-dark'   => __('Dark', 'pgrr'),
+            'bg-white'   => __('White', 'pgrr'),
+            'bg-transparent'   => __('Transparent', 'pgrr'),
           )
         )
       )
@@ -94,8 +93,8 @@ class TopNavbarCustomizer
           'settings'       => 'nav_shadow',
           'type'           => 'select',
           'choices'        => array(
-            'shadow'   => __('Shadow'),
-            ''   => __('None'),
+            'shadow'   => __('Shadow', 'pgrr'),
+            ''   => __('None', 'pgrr'),
           )
         )
       )
