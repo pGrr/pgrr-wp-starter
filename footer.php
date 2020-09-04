@@ -23,7 +23,7 @@
 		<?php endforeach; ?>
 	</div>
 	<div class="row justify-content-center site-info small <?= get_theme_mod('footer_credits_text_color') ?> <?= get_theme_mod('footer_credits_bg') ?> ">
-		<a href="<?php echo esc_url(__('https://wordpress.org/', 'pgrr')); ?>" class="unlink">Proudly powered by Wordpress | Theme: <a href="https://github.com/pGrr/pgrr-wp-starter" class="unlink"> pgrr-wp-starter by Paolo Garroni</a>
+		<a href="https://wordpress.org/" class="unlink">Proudly powered by Wordpress </a> | Theme: <a href="https://github.com/pGrr/pgrr-wp-starter" class="unlink"> pgrr-wp-starter by Paolo Garroni</a>
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 
