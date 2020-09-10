@@ -143,8 +143,8 @@ function pgrr_scripts() {
 	wp_enqueue_style( 'pgrr-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'pgrr-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'wp-api' );
+	wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/46de57cbc9.js', array(), _S_VERSION, true);
 	wp_enqueue_script( 'pgrr-script', get_template_directory_uri() . '/script.js', array(), _S_VERSION, true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -185,4 +185,24 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-require_once 'controllers/functions_includes.php';
+/**
+ * pgrr theme - Register Custom Navigation Walker
+ */
+function register_navwalker(){
+    require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
+
+/**
+ * pgrr theme - Register footer widget areas
+ */
+foreach (['start', 'middle', 'end'] as $pos) {
+    register_sidebar( array(
+        'id'          => 'footer-' . $pos,
+        'name'        => 'Footer ' . $pos,
+        'description' => __( 'Footer ' . $pos . ' widgets', 'pgrr' ),
+        'before_widget' => '<div class="p-3">',
+        'after_widget' => '</div>',
+    ) );
+}
+

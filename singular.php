@@ -8,8 +8,6 @@
  */
 
 get_header();
-get_template_part('template-parts/content');
+get_template_part('template-parts/content', 'singular');
 // get_sidebar();
 get_footer();
-
-?>

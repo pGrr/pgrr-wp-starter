@@ -10,25 +10,33 @@
  * @package pgrr
  */
 
+// default arguments
+$defaultArgs = array(
+    'text-color' => 'text-light',
+    'bg-color' => 'bg-primary',
+    'credits-text-color' => 'text-light',
+    'credits-bg-color' => 'bg-dark',
+    'shadow' => 'shadow',
+);
+// if arguments are provided merge them with the default ones
+$args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 ?>
-
-<footer id="colophon" class="site-footer container-fluid <?= get_theme_mod('footer_text_color') ?> <?= get_theme_mod('footer_bg') ?> <?= get_theme_mod('footer_shadow') ?>">
-	<div class="row justify-content-center">
-		<?php foreach (['start', 'middle', 'end'] as $pos) : ?>
-			<div class="col-md p-2 d-flex justify-content-center">
-				<div>
-					<?php dynamic_sidebar('footer-' . $pos); ?>
-				</div>
-			</div>
-		<?php endforeach; ?>
-	</div>
-	<div class="row justify-content-center site-info small <?= get_theme_mod('footer_credits_text_color') ?> <?= get_theme_mod('footer_credits_bg') ?> ">
-		<a href="https://wordpress.org/" class="unlink">Proudly powered by Wordpress </a> | Theme: <a href="https://github.com/pGrr/pgrr-wp-starter" class="unlink"> pgrr-wp-starter by Paolo Garroni</a>
-	</div><!-- .site-info -->
+</main>
+<footer id="colophon"
+        class="site-footer container-fluid <?= $args['text-color'] ?> <?= $args['bg-color'] ?> <?= $args['shadow'] ?>">
+    <div class="row justify-content-center">
+        <?php foreach (['start', 'middle', 'end'] as $pos) : ?>
+            <div class="col-md p-2 d-flex justify-content-center">
+                <div>
+                    <?php dynamic_sidebar('footer-' . $pos); ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <div class="row justify-content-center site-info small <?= $args['credits-text-color'] ?> <?= $args['credits-bg-color'] ?> ">
+        <a href="https://wordpress.org/" class="unlink">Proudly powered by Wordpress </a> | Theme: <a href="https://github.com/pGrr/pgrr-wp-starter" class="unlink"> pgrr-wp-starter by Paolo Garroni</a>
+    </div><!-- .site-info -->
 </footer><!-- #colophon -->
-
 <?php wp_footer(); ?>
-
 </body>
-
 </html>

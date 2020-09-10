@@ -13,19 +13,27 @@
  * @package pgrr
  */
 
-get_header();
-
-if (is_singular()) {
-	get_template_part('template-parts/content', 'singular');
-} else if (is_archive()) {
-	get_template_part('template-parts/content', 'archive');
-} else if (is_search()) {
-	get_template_part('template-parts/content', 'search');
-} else if (have_posts()) {
-	get_template_part('template-parts/content', 'posts');
-} else {
-	get_template_part('template-parts/content', 'none');
+function render($content, $slug = null, $args = null) {
+    get_header();
+    get_template_part("template-parts/$content", $slug, $args);
+    // get_sidebar();
+    get_footer();
 }
 
-// get_sidebar();
-get_footer();
+if (is_singular()) {
+	render( 'content', 'singular');
+} else if (is_archive()) {
+	render( 'cards', 'default', array(
+	    'title' => get_the_archive_title(),
+        'subtitle' => get_the_archive_description()
+    ));
+} else if (is_search()) {
+	render('content', 'search');
+} else if (have_posts()) {
+	render( 'cards', null, array(
+	    'title' => 'Latest posts'
+    ));
+} else {
+	render('content', 'none');
+}
+

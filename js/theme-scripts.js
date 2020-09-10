@@ -1,7 +1,8 @@
 /**
- * WP Comments markup styling
+ * WP Markup Styling
  */
 $(document).ready(function () {
+  // WP Comments markup
   $('ol.comment-list').addClass('pl-0');
   $('ol.children').addClass('pl-0');
   $('.comment').addClass('card shadow m-4');
@@ -23,29 +24,18 @@ $(document).ready(function () {
   $('input#author, input#email, input#url').addClass('form-control');
   $('#cancel-comment-reply-link').addClass('ml-3');
   $('#reply-title').addClass('h4');
-});
-
-/**
- * Singular featured image styling
- */
-$(document).ready(function () {
+  // Featured image
   $('.post-thumbnail>img')
-    .addClass('img-thumbnail img-fluid shadow mx-auto d-block ');
+      .addClass('img-thumbnail img-fluid shadow mx-auto d-block ');
   $('.post-thumbnail>img').css('max-height', '200px');
   $('.post-thumbnail>img').css('width', 'auto');
-});
-
-
-/**
- * Custom logo link image styling
- */
-$(document).ready(function () {
+  // Custom logo link image
   $('.custom-logo-link>img').css('max-height', '50px');
   $('.custom-logo-link>img').css('width', 'auto');
-});
-
-$(document).ready(function () {
-  $('footer a').addClass('unlink');
+  // Footer widgets
+  $('.site-footer a').addClass('unlink');
   $('footer ul, footer li').css('list-style-type', 'none');
   $('footer ul').css('margin', '0px');
+  // Posts navigation links
+  $('#posts-navigation a').addClass('btn btn-dark m-2');
 });
