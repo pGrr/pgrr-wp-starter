@@ -10,7 +10,7 @@
 
 get_header();
 if (have_posts()) {
-    get_template_part('template-parts/cards', 'default', array(
+    get_template_part('template-parts/content', 'loop', array(
             'title' => sprintf(esc_html__('Search Results for: %s', 'pgrr'), get_search_query()),
     ));
 } else {

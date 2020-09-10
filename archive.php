@@ -10,7 +10,7 @@
 
 get_header();
 if (have_posts()) {
-    get_template_part('template-parts/cards', 'default', array(
+    get_template_part('template-parts/content', 'loop', array(
         'title' => get_the_archive_title(),
         'subtitle' => get_the_archive_description(),
     ));

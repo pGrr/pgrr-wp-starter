@@ -23,14 +23,14 @@ function render($content, $slug = null, $args = null) {
 if (is_singular()) {
 	render( 'content', 'singular');
 } else if (is_archive()) {
-	render( 'cards', 'default', array(
+	render( 'content', 'loop', array(
 	    'title' => get_the_archive_title(),
         'subtitle' => get_the_archive_description()
     ));
 } else if (is_search()) {
 	render('content', 'search');
 } else if (have_posts()) {
-	render( 'cards', null, array(
+	render( 'content', 'loop', array(
 	    'title' => 'Latest posts'
     ));
 } else {
