@@ -47,3 +47,64 @@ a.unlink, a.unlink:hover {
   font-family: $font-family-sans-serif;
 }
 
+
+/**
+ * Carousel styles
+ */
+
+/* Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width */
+
+#pgrr-carousel {
+  height: 500px;
+}
+
+.carousel-background {
+  background-size:105%;
+}
+
+.carousel-item.active .carousel-background {
+  animation-name: zoom;
+  animation-duration: 4s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  #pgrr-carousel {
+    height: 450px;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #pgrr-carousel {
+    height: 350px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  #pgrr-carousel {
+    height: 300px;
+  }
+  .slide-title {
+    font-size:1.75rem;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #pgrr-carousel {
+    height: 300px;
+  }
+  .slide-title {
+    font-size:1.5rem;
+  }
+}
+
+@keyframes zoom {
+  0%   {background-size:105%;}
+  100% {background-size:100%;}
+}

@@ -15,7 +15,7 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 <section id="content" class="container">
 
     <?php if ($args['title'] || $args['description']) : ?>
-        <header class="page-header text-center mt-5">
+        <header class="page-header text-center mt-5 reveal">
             <?php if ($args['title']) : ?>
                 <h1 class="page-title text-center <?= $args['title-class'] ?>'"><?= $args['title'] ?></h1>
             <?php endif; ?>

@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    $('.carousel-item').first().addClass('active');
-    $('.carousel-background').css('background-size', '105%').animate({backgroundSize: '-=5%'}, 4000);
-    $('#pgrr-carousel').on('slid.bs.carousel', function () {
-        $('.carousel-item.active .carousel-background').animate({backgroundSize: '-=5%'}, 4000);
+    $('.carousel-item').first().css('background-size', '105%').addClass('active');
+    $('.carousel-item.active .carousel-background').first().animate({backgroundSize: '-=5%'}, 5000, function() {
+        $('.carousel').carousel('next');
     });
-    $('#pgrr-carousel').on('slid.bs.carousel', function () {
-        $('.carousel-background').css('background-size', '105%');
+    slide.bs.carousel.to
+    $('#pgrr-carousel').on('slide.bs.carousel', function () {
+
     });
 });

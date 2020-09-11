@@ -5,11 +5,6 @@
 
 // default arguments
 $defaultArgs = array(
-        'xl-height' => '80vh',
-    'lg-height' => '60vh',
-    'md-height' => '50vh',
-    'sm-height' => '40vh',
-    'xs-height' => '35vh',
     'slides' => array(
         'manhattan-summer' => array(
             'title' => 'Manhattan summer',
@@ -34,58 +29,17 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 // enqueue js code script
 wp_enqueue_script(
         'pgrr-carousel',
-        get_stylesheet_directory_uri() . '/js/carousel.js',
+        get_theme_file_uri() . '/js/carousel.js',
         array('jquery'),
         "1.0",
         true);
 ?>
-<style type="text/css" scoped>
-    /* Extra large devices (large desktops)
-    // No media query since the extra-large breakpoint has no upper bound on its width */
-    #pgrr-carousel {
-        height: <?= $args['xl-height'] ?>;
-    }
-
-    /* Large devices (desktops, less than 1200px) */
-    @media (max-width: 1199.98px) {
-        #pgrr-carousel {
-            height: <?= $args['lg-height'] ?>;
-        }
-    }
-
-    /* Medium devices (tablets, less than 992px) */
-    @media (max-width: 991.98px) {
-        #pgrr-carousel {
-            height: <?= $args['md-height'] ?>;
-        }
-    }
-
-    /* Small devices (landscape phones, less than 768px) */
-    @media (max-width: 767.98px) {
-        #pgrr-carousel {
-            height: <?= $args['sm-height'] ?>;
-        }
-        .slide-title {
-            font-size:1.75rem;
-        }
-    }
-
-    /* Extra small devices (portrait phones, less than 576px) */
-    @media (max-width: 575.98px) {
-        #pgrr-carousel {
-            height: <?= $args['xs-height'] ?>;
-        }
-        .slide-title {
-            font-size:1.5rem;
-        }
-    }
-</style>
 
 <div id="pgrr-carousel" class="carousel slide carousel-fade" data-ride="carousel">
     <div class="carousel-inner h-100 w-100 bg-dark">
         <?php foreach ($args['slides'] as $slide) : ?>
         <!-- carousel slide -->
-        <div class="carousel-item h-100 w-100">
+        <div class="carousel-item h-100 w-100 reveal">
             <div class="carousel-background h-100 w-100 d-flex justify-content-center align-items-center"
                  style="background-image:url('<?= $slide['img-url'] ?>'); background-repeat: no-repeat; background-position: center;">
                 <?php if ($slide['title'] != null || $slide['subtitle'] != null) : ?>

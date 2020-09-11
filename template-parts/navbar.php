@@ -20,7 +20,7 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 ?>
 
 <!-- Navbar -->
-<header id="masthead" class="site-header">
+<header id="masthead" class="site-header reveal">
     <nav class="navbar navbar-expand-lg <?php $args['position'] ?> <?= $args['bg-type'] ?> <?= $args['bg'] ?> <?= $args['shadow'] ?>">
         <!-- Brand -->
         <div class="navbar-brand d-flex flex-row">
