@@ -44,5 +44,5 @@ $(document).ready(function () {
  * Scrollreveal initialization
  */
 $(document).ready(function() {
-  ScrollReveal().reveal('.reveal', {delay: 1000, duration:1000});
+  ScrollReveal().reveal('.reveal', {delay: 1000, duration:2000});
 })
