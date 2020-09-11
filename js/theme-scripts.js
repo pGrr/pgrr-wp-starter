@@ -39,3 +39,10 @@ $(document).ready(function () {
   // Posts navigation links
   $('#posts-navigation a').addClass('btn btn-dark m-2');
 });
+
+/**
+ * Scrollreveal initialization
+ */
+$(document).ready(function() {
+  ScrollReveal().reveal('.reveal', {delay: 1000, duration:1000});
+})
