@@ -32,7 +32,6 @@ function pgrr_customize_register($wp_customize)
 				'render_callback' => 'pgrr_customize_partial_blogdescription',
 			)
 		);
-		\pgrr\views\PgrrCustomizer::addAll($wp_customize);
 	}
 }
 add_action('customize_register', 'pgrr_customize_register');
