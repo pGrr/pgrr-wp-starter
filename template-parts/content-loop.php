@@ -3,6 +3,8 @@
 $defaultArgs = array(
     'title' => '',
     'subtitle' => '',
+    'title-class' => 'h2',
+    'subtitle-class' => 'h5',
     'query' => $GLOBALS['wp_query'],
     'read-more' => 'Read more'
 );
@@ -15,21 +17,21 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
     <?php if ($args['title'] || $args['description']) : ?>
         <header class="page-header text-center mt-5">
             <?php if ($args['title']) : ?>
-                <h1 class="page-title text-center"><?= $args['title'] ?></h1>
+                <h1 class="page-title text-center <?= $args['title-class'] ?>'"><?= $args['title'] ?></h1>
             <?php endif; ?>
             <?php if ($args['subtitle']) : ?>
-                <p class="text-center"><?= $args['subtitle'] ?></p>
+                <p class="text-center <?= $args['subtitle-class'] ?>"><?= $args['subtitle'] ?></p>
             <?php endif; ?>
         </header><!-- .page-header -->
     <?php endif; ?>
 
     <?php if ($args['query']->have_posts()) : ?>
         <div class="row justify-content-center">
-            <div class="card-columns my-4">
+            <div class="card-deck justify-content-center">
                 <?php
                 while ($args['query']->have_posts()) {
                     $args['query']->the_post();
-                    get_template_part('template-parts/card');
+                    get_template_part('template-parts/card', null, array('read-more' => $args['read-more']));
                 }
                 ?>
             </div>

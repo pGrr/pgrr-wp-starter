@@ -60,6 +60,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "del": "^5.1.0"
+    "del": "^5.1.0",
+    "sal.js": "^0.8.1"
   }
 }

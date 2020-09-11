@@ -20,7 +20,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <?php wp_head(); ?>
 </head>
-<body id="body" <?php body_class(); ?>>
+<body id="body" <?php body_class('my-0'); ?>>
 <?php wp_body_open(); ?>
 <a class="skip-link screen-reader-text" href="#primary" style="font-size:0px; position:absolute;">
     <?php esc_html_e('Skip to content', 'pgrr'); ?>

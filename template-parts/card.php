@@ -1,26 +1,33 @@
 <?php
 // default arguments
 $defaultArgs = array(
-    'read-more' => 'Read more'
+    'title-class' => 'h4',
+    'body-class' => 'd-none',
+    'read-more' => 'Read more',
+    'button-class' => 'btn btn-dark shadow',
 );
 // if arguments are provided merge them with the default ones
 $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 ?>
 
-<article class="my-3">
-    <div class="card shadow rounded-0" style="width: 18rem;">
+<article>
+    <div class="card shadow rounded-0 my-4" style="width: 18rem;">
         <?php if (has_post_thumbnail()) : ?>
-            <img class="card-img-top" src="<?php the_post_thumbnail_url() ?>" alt="Card image cap">
+
+            <div style="height:150px;background-image:url(<?php the_post_thumbnail_url() ?>);background-position:center;background-size:cover">
+
+        </div>
         <?php endif; ?>
+
         <header class="card-header text-center border-bottom">
-            <h2><?php the_title() ?></h2>
+            <h2 class="<?= $args['title-class'] ?>"><?php the_title() ?></h2>
         </header>
-        <div class="card-body p-3">
+        <div class="card-body p-3 <?= $args['body-class'] ?>">
             <?php the_excerpt() ?>
         </div>
         <footer class="card-footer text-center">
-            <a class="btn btn-outline-dark" href="<?php the_permalink() ?>">
-                <?php esc_html_e($args['read-more'], 'pgrr') ?>
+            <a class="<?= $args['button-class'] ?>" href="<?php the_permalink() ?>">
+                <?php esc_html_e($args['read-more'], 'pgrr') ?> <i class="fas fa-chevron-circle-right"></i>
             </a>
         </footer>
     </div>

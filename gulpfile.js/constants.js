@@ -18,6 +18,8 @@ module.exports = {
             `node_modules/jquery/dist/jquery.min.js`,
             // bootstrap
             `node_modules/bootstrap/dist/js/bootstrap.min.js`,
+            // sal (scroll animate lightweight)
+            `node_modules/sal.js/dist/sal.js`,
             // theme scripts
             `js/theme-scripts.js`,
         ],

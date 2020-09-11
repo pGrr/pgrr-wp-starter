@@ -9,7 +9,11 @@
 $defaultArgs = array(
     'bg-type' => 'navbar-dark',
     'bg' => 'bg-primary',
-    'shadow' => 'shadow'
+    'shadow' => 'shadow',
+    'position' => 'navbar-static-top',
+    'title-font-class' => 'sans-serif',
+    'description-font-class' => 'sans-serif',
+    'menu-font-class' => 'sans-serif',
 );
 // if arguments are provided merge them with the default ones
 $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
@@ -17,7 +21,7 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 
 <!-- Navbar -->
 <header id="masthead" class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-static-top <?= $args['bg-type'] ?> <?= $args['bg'] ?> <?= $args['shadow'] ?>">
+    <nav class="navbar navbar-expand-lg <?php $args['position'] ?> <?= $args['bg-type'] ?> <?= $args['bg'] ?> <?= $args['shadow'] ?>">
         <!-- Brand -->
         <div class="navbar-brand d-flex flex-row">
             <?php if (has_custom_logo()) : ?>
@@ -29,13 +33,13 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
                 <div class="d-flex flex-column justify-content-center mx-3">
                     <?php if (get_bloginfo('name') || is_customize_preview()) : ?>
                         <!-- Site title -->
-                        <a class="site-title sans-serif unlink" href="<?= esc_url(home_url('/')); ?>">
+                        <a class="site-title <?= $args['title-font-class'] ?> unlink" href="<?= esc_url(home_url('/')); ?>">
                             <?= esc_html__(bloginfo('name'), 'pgrr'); ?>
                         </a><!-- Site title -->
                     <?php endif; ?>
                     <?php if (get_bloginfo('description') || is_customize_preview()) : ?>
                         <!-- Site description -->
-                        <a class="site-description serif unlink small d-none d-sm-inline" href="<?= esc_url(home_url('/')); ?>">
+                        <a class="site-description <?= $args['description-font-class'] ?> unlink small d-none d-sm-inline" href="<?= esc_url(home_url('/')); ?>">
                             <?= esc_html__(get_bloginfo('description'), 'pgrr') ?>
                         </a><!-- Site description -->
                     <?php endif; ?>
@@ -55,7 +59,7 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
             'container_id'      => 'main-nav',
             'container_class'   => 'collapse navbar-collapse justify-content-end',
             'menu_id'           => 'menu-content',
-            'menu_class'        => 'nav navbar-nav sans-serif',
+            'menu_class'        => 'nav navbar-nav ' . $args['menu-font-class'],
             'depth'             => 3,
         ));
         ?>
