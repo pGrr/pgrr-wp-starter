@@ -14,7 +14,7 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
     <div class="card reveal shadow rounded-0 my-4" style="width: 18rem;">
         <?php if (has_post_thumbnail()) : ?>
 
-            <div style="height:150px;background-image:url(<?php the_post_thumbnail_url() ?>);background-position:center;background-size:cover">
+            <div class="lazy" style="height:150px;background-image:url(<?php the_post_thumbnail_url() ?>);background-position:center;background-size:cover">
 
         </div>
         <?php endif; ?>

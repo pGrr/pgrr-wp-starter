@@ -38,7 +38,30 @@ $(document).ready(function () {
   $('footer ul').css('margin', '0px');
   // Posts navigation links
   $('#posts-navigation a').addClass('btn btn-dark m-2');
+  $('body').removeClass('d-none');
 });
+
+/**
+ * Lazy load initialization
+ */
+$(document).ready(function() {
+  $('.lazy').Lazy({
+    scrollDirection: 'vertical',
+    effect: 'fadeIn',
+    visibleOnly: true,
+    onError: function(element) {
+      console.log('error loading ' + element.data('src'));
+    }
+  });
+});
+
+/**
+ * Carousel initialization
+ */
+$(document).ready(function() {
+  $('.carousel-item').first().addClass('active');
+});
+
 
 /**
  * Scrollreveal initialization

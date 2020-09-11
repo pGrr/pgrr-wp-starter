@@ -26,13 +26,6 @@ $defaultArgs = array(
 );
 // if arguments are provided merge them with the default ones
 $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
-// enqueue js code script
-wp_enqueue_script(
-        'pgrr-carousel',
-        get_theme_file_uri() . '/js/carousel.js',
-        array('jquery'),
-        "1.0",
-        true);
 ?>
 
 <div id="pgrr-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -40,7 +33,7 @@ wp_enqueue_script(
         <?php foreach ($args['slides'] as $slide) : ?>
         <!-- carousel slide -->
         <div class="carousel-item h-100 w-100 reveal">
-            <div class="carousel-background h-100 w-100 d-flex justify-content-center align-items-center"
+            <div class="carousel-background lazy h-100 w-100 d-flex justify-content-center align-items-center"
                  style="background-image:url('<?= $slide['img-url'] ?>'); background-repeat: no-repeat; background-position: center;">
                 <?php if ($slide['title'] != null || $slide['subtitle'] != null) : ?>
                     <div class="font-weight-bold text-dark text-center p-3 rounded shadow" style="background-color:rgba(255,255,255,0.5);">
