@@ -39,3 +39,6 @@ $(document).ready(function () {
   // Posts navigation links
   $('#posts-navigation a').addClass('btn btn-dark m-2');
 });
+
+// Initialize sal library
+sal();
