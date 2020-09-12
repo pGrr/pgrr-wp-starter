@@ -144,8 +144,7 @@ function pgrr_scripts() {
 	wp_style_add_data( 'pgrr-style', 'rtl', 'replace' );
 	wp_enqueue_script( 'wp-api' );
 	wp_enqueue_script('fontawesome', 'https://kit.fontawesome.com/46de57cbc9.js', array(), _S_VERSION, false);
-    wp_enqueue_script('scrollreveal', 'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js', array(), _S_VERSION, false);
-    wp_enqueue_script( 'pgrr-script', get_theme_file_uri() . '/script.js', array(), _S_VERSION, false );
+    wp_enqueue_script( 'pgrr-script', get_stylesheet_directory_uri() . '/script.js', array(), _S_VERSION, false );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -207,3 +206,8 @@ foreach (['start', 'middle', 'end'] as $pos) {
     ) );
 }
 
+/**
+ * pgrr theme - look and feel "skin" global variable
+ */
+require_once 'skins/skin-urbanfabrica.php'; // change this to apply a specific look and feel
+$GLOBALS['skin'] = isset($skin) ? $skin : array();

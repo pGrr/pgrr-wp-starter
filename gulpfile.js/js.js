@@ -14,7 +14,7 @@ function js() {
         .pipe(babel({
             presets: ['@babel/env']
         }))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(rename(constants.scripts.output.name))
         .pipe(dest(constants.scripts.output.dir))
 }

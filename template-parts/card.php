@@ -4,13 +4,13 @@ $defaultArgs = array(
     'title-class' => 'h4',
     'body-class' => 'd-none',
     'read-more' => 'Read more',
-    'button-class' => 'btn btn-dark shadow',
+    'button-class' => 'btn btn-dark shadow small',
 );
 // if arguments are provided merge them with the default ones
 $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
 ?>
 
-<article>
+<article class="hover-grow">
     <div class="card reveal shadow rounded-0 my-4" style="width: 18rem;">
         <?php if (has_post_thumbnail()) : ?>
 
@@ -26,7 +26,7 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
             <?php the_excerpt() ?>
         </div>
         <footer class="card-footer text-center">
-            <a class="<?= $args['button-class'] ?>" href="<?php the_permalink() ?>">
+            <a class="<?= $args['button-class'] ?> hover-grow" href="<?php the_permalink() ?>">
                 <?php esc_html_e($args['read-more'], 'pgrr') ?> <i class="fas fa-chevron-circle-right"></i>
             </a>
         </footer>

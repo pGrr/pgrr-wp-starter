@@ -60,6 +60,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "del": "^5.1.0"
+    "del": "^5.1.0",
+    "scrollreveal": "^4.0.7"
   }
 }

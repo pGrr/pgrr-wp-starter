@@ -1,20 +1,20 @@
 var particlesJsParams = {
     "particles": {
         "number": {
-            "value": 50,
+            "value": 40,
             "density": {
                 "enable": false,
                 "value_area": 800
             }
         },
         "color": {
-            "value": "#000000"
+            "value": "#ffffff"
         },
         "shape": {
             "type": "circle",
             "stroke": {
                 "width": 0,
-                "color": "#000000"
+                "color": "#ffffff"
             },
             "polygon": {
                 "nb_sides": 5
@@ -26,17 +26,17 @@ var particlesJsParams = {
             }
         },
         "opacity": {
-            "value": 0.2,
-            "random": true,
+            "value": 1,
+            "random": false,
             "anim": {
-                "enable": true,
+                "enable": false,
                 "speed": 0.1,
                 "opacity_min": 0.1,
                 "sync": false
             }
         },
         "size": {
-            "value": 25,
+            "value": 40,
             "random": true,
             "anim": {
                 "enable": true,
@@ -119,4 +119,5 @@ $(document).ready(function() {
         .css('z-index', '-1');
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
     particlesJS('particles-js', particlesJsParams);
+    $('.particles-js-canvas-el').css('background-color', '#F2F2F2');
 });

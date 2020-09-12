@@ -20,7 +20,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 */
 
 @import "underscores/style.scss";
-@import "bootstrap-overrides";
+// @import "bootstrap-overrides-default";
+@import "bootstrap-overrides-urbanfabrica"; // change this to apply a specific look and feel
 @import "bootstrap.scss";
 
 /**
@@ -107,4 +108,15 @@ a.unlink, a.unlink:hover {
 @keyframes zoom {
   0%   {background-size:105%;}
   100% {background-size:100%;}
+}
+
+/**
+ * Hover animations
+ */
+.hover-grow {
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

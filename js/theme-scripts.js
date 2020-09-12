@@ -1,7 +1,30 @@
-/**
- * WP Markup Styling
- */
 $(document).ready(function () {
+
+  /**
+   * Lazy load initialization
+   */
+  $('.lazy').Lazy({
+    scrollDirection: 'vertical',
+    effect: 'fadeIn',
+    visibleOnly: true,
+    onError: function(element) {
+      console.log('error loading ' + element.data('src'));
+    }
+  });
+
+  /**
+   * Scrollreveal initialization
+   */
+  ScrollReveal().reveal('.reveal', {duration:2000});
+
+  /**
+   * Carousel initialization
+   */
+  $('.carousel-item').first().addClass('active');
+
+  /**
+   * WP Markup Styling
+   */
   // WP Comments markup
   $('ol.comment-list').addClass('pl-0');
   $('ol.children').addClass('pl-0');
@@ -39,33 +62,6 @@ $(document).ready(function () {
   // Posts navigation links
   $('#posts-navigation a').addClass('btn btn-dark m-2');
   $('body').removeClass('d-none');
+
 });
 
-/**
- * Lazy load initialization
- */
-$(document).ready(function() {
-  $('.lazy').Lazy({
-    scrollDirection: 'vertical',
-    effect: 'fadeIn',
-    visibleOnly: true,
-    onError: function(element) {
-      console.log('error loading ' + element.data('src'));
-    }
-  });
-});
-
-/**
- * Carousel initialization
- */
-$(document).ready(function() {
-  $('.carousel-item').first().addClass('active');
-});
-
-
-/**
- * Scrollreveal initialization
- */
-$(document).ready(function() {
-  ScrollReveal().reveal('.reveal', {delay: 1000, duration:2000});
-})

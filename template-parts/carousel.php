@@ -32,9 +32,9 @@ $args = isset($args) ? array_merge($defaultArgs, $args) : $defaultArgs;
     <div class="carousel-inner h-100 w-100 bg-dark">
         <?php foreach ($args['slides'] as $slide) : ?>
         <!-- carousel slide -->
-        <div class="carousel-item h-100 w-100 reveal">
+        <div class="carousel-item h-100 w-100">
             <div class="carousel-background lazy h-100 w-100 d-flex justify-content-center align-items-center"
-                 style="background-image:url('<?= $slide['img-url'] ?>'); background-repeat: no-repeat; background-position: center;">
+                 style="background-image:url('<?= wp_get_attachment_image_src( $slide['img-url'], 'full')[0]; ?>'); background-repeat: no-repeat; background-position: center;">
                 <?php if ($slide['title'] != null || $slide['subtitle'] != null) : ?>
                     <div class="font-weight-bold text-dark text-center p-3 rounded shadow" style="background-color:rgba(255,255,255,0.5);">
                         <?php if ($slide['title'] != null) : ?>

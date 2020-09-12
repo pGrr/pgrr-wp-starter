@@ -18,8 +18,10 @@ module.exports = {
             `node_modules/jquery/dist/jquery.min.js`,
             // bootstrap
             `node_modules/bootstrap/dist/js/bootstrap.min.js`,
+            // scrollreveal
+            `node_modules/scrollreveal/dist/scrollreveal.min.js`,
             // jquery lazy load plugin
-            `js/jquery.lazy.plugins.min.js`,
+            `js/jquery-lazy-plugin.js`,
             // theme scripts
             `js/theme-scripts.js`,
         ],
